@@ -5,7 +5,9 @@ from io import BytesIO
 from datetime import datetime
 from flask import render_template, send_file, make_response
 from LearnFlask import app
+from .classes.Planet import Planet
 
+planet = Planet()
 
 @app.route('/')
 @app.route('/home')
@@ -27,22 +29,24 @@ def contact():
         message='Your contact page.'
     )
 
-@app.route('/about')
+@app.route('/mars')
 def about():
     """Renders the about page."""
+    planet.set_name('Mars')
     return render_template(
         'about.html',
         title='About',
         year=datetime.now().year,
-        message='Your application description page.'
+        message=planet.introduction()
     )
 
-@app.route('/test')
+@app.route('/jupyter')
 def test():
+    planet.set_name('Jupyter')
     """Renders the test page."""
     return render_template(
         'testing.html',
         title='Testing',
         year=datetime.now().year,
-        message='This page was made for testing purposes'
+        message=planet.introduction()
     )

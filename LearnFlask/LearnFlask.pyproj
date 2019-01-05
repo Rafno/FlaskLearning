@@ -28,12 +28,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="LearnFlask\classes\Planet.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="LearnFlask\__init__.py" />
     <Compile Include="LearnFlask\views.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="LearnFlask\" />
+    <Folder Include="LearnFlask\classes\" />
     <Folder Include="LearnFlask\static\" />
     <Folder Include="LearnFlask\static\content\" />
     <Folder Include="LearnFlask\static\fonts\" />
