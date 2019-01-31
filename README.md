@@ -6,3 +6,7 @@ Install pip for python3.
 pip3 install flask
 
 python3 runserver.py
+
+
+
+https://blog.theodo.fr/2017/03/developping-a-flask-web-app-with-a-postresql-database-making-all-the-possible-errors/
